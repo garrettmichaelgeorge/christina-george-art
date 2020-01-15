@@ -30,11 +30,11 @@
       <link rel="stylesheet" href="{{ "/assets/styles.css" | relative_url }}">
     {% endif %}
 
-    {% if site.avatarurl %}{% include site-favicons.html %}{% endif %}
+    {% if site.favicons or site.avatarurl %}{% include site-favicons.html %}{% endif %}
 
     {% if site.google_analytics %}{% include site-analytics.html %}{% endif %}
 
-    <script src="https://identity-js.netlify.com/v1/netlify-identity-widget.js"></script>
+    {% include site-before-start.html %}
   </head>
 
   <body class="layout-{{ page.layout }}{% if page.title %}  {{ page.title | slugify }}{% endif %}">
@@ -43,6 +43,8 @@
     {{ content }}
 
     {% if site.service_worker != false %}{% include site-sw.html %}{% endif %}
+
+    {% include site-before-end.html %}
   </body>
 
 </html>

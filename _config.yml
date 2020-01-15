@@ -19,10 +19,12 @@ plugins:
 - jemoji
 
 # Site settings
-url: 'https://mydomain.com'
+encoding: utf-8
+lang: en-US
+url: 'https://christinageorgeart.com'
 baseurl: ''
-title: 'My website'
-description: 'This is my new website'
+title: 'Christina George, artist'
+description: 'Christina George artist portfolio'
 permalink: pretty
 logo: "https://www.gravatar.com/avatar/6c0377abcf4da91cdd35dea4554b2a4c?s=52"
 
@@ -35,14 +37,13 @@ navigation_header:
 - title: Home
   url: /
 - title: About
-  url: /about/
-- title: Blog
-  url: /blog/
+  url: "#about"
 
 # Footer nav
 navigation_footer:
 - title: Back to top
   url: "#top"
+- title: Created by Garrett George
 
 # Collections
 collections:
