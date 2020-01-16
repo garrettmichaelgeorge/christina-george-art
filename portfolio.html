@@ -3,13 +3,16 @@ layout: page
 title: Portfolio
 ---
 
-<ul>
+<ul class="list list--posts">
   {% for work in site.works %}
     <li>
-      <h2><a href="{{ work.url }}">{{ work.title }}</a></h2>
-      <p>{{ work.date_completed }}</p>
-      <p>{{ work.materials }}</p>
-      <p>{{ work.content | markdownify }}</p>
+      <div class="work-thumbail-wrapper figure--center">
+        <a class=work-link" href="{{ work.url }}">
+          <img class="image" src='https://picsum.photos/600/800?image=894' alt="{{ work.title }}">
+          <h3>{{ work.title }}</h3>
+        </a>
+        <p>{{ work.materials }}</p>
+      </div>
     </li>
   {% endfor %}
 </ul>
