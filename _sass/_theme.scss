@@ -129,6 +129,7 @@ body {
 
 // Main content
 .main {
+  padding-top: 6rem;
   @include flexbox;
   @include flex-direction(column);
   @include flex(1, 0, auto);

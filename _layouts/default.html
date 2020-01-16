@@ -40,7 +40,12 @@
   <body class="layout-{{ page.layout }}{% if page.title %}  {{ page.title | slugify }}{% endif %}">
     {% include site-icons.svg %}
 
+    {% include site-header.html %}
+
     {{ content }}
+
+    {% include site-footer.html %}
+
 
     {% if site.service_worker != false %}{% include site-sw.html %}{% endif %}
 
