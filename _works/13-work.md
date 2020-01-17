@@ -1,12 +1,12 @@
 ---
-title: Tree-o
+title: Work 13
 materials: Watercolor, ink wash
-dimensions: 11 x 14
-price: $1000
+dimensions: 3 x 5
+price: $100
 date_completed:
 
 image:
-  url: 'img-1.jpg'
+  url: 'img-13.jpg'
   width:
   height:
 

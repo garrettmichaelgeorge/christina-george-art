@@ -8,7 +8,7 @@ title: Portfolio
     <li>
       <div class="work-thumbail-wrapper figure--center">
         <a class=work-link" href="{{ work.url }}">
-          <img class="image" src='https://picsum.photos/600/800?image=894' alt="{{ work.title }}">
+          <img class="image" src="{{ work.image.url | prepend: site.image_serve_path }}" alt="{{ work.title }}">
           <h3>{{ work.title }}</h3>
         </a>
         <p>{{ work.materials }}</p>
