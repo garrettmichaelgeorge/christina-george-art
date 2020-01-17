@@ -2,7 +2,39 @@
 layout: default
 ---
 
-<h1>{{ work.title }}</h1>
-<h2>{{ work.materials }}</h2>
+<figure class="image-wrapper">
 
-{{ content }}
+  <!-- Image -->
+
+  <img src="{{ page.image.url | prepend: site.image_serve_path }}">
+
+  {% for image in entry.images %}
+
+    <figure class="image-wrapper {{ image.positioning }}">
+      <img class="{{ image.border }}" src="{{ image.url | prepend: site.image_serve_path }}" alt="{{ stored_description | normalize_whitespace }}">
+      {% if image.caption %}
+        <figcaption>{{ image.caption }}</figcaption>
+      {% endif %}
+    </figure>
+
+  {% endfor %}
+
+
+
+
+
+
+
+  <!-- Title -->
+  <figcaption>{{ page.title }}</figcaption>
+
+  <!-- Materials -->
+  <figcaption>{{ page.materials }}</figcaption>
+
+  <!-- Dimensions -->
+  <figcaption>{{ page.dimensions }}</figcaption>
+
+  <!-- Price -->
+  <figcaption>{{ page.price }}</figcaption>
+
+</figure>
