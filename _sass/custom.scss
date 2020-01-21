@@ -1,13 +1,5 @@
 /* Custom additions to Alembic theme */
 
-.typeset h1, h2, h3, h4, h5, h6 {
-  color: $headingColour;
-  font-family: unquote(map-get($headingtype, font-family));
-  font-feature-settings:  'liga', 'lnum', 'kern';
-  font-style: normal;
-  font-weight: map-get($headingtype, regular);
-}
-
 .feature {
   text-align: left;
   h1 {
@@ -18,10 +10,44 @@
   }
 }
 
-.typeset .artist {
-  font-size: 0.65em;
-  font-style: italic;
-  letter-spacing: 0;
-  font-variant-caps: normal;
-  font-feature-settings: normal;
+/* Sassline overrides */
+
+.typeset  {
+  // All headings.
+  h1, h2, h3, h4, h5, h6 {
+    color: $headingColour;
+    font-family: unquote(map-get($headingtype, font-family));
+    font-feature-settings:  'liga', 'lnum', 'kern';
+    font-style: normal;
+    font-weight: map-get($headingtype, regular);
+  }
+
+  // Styling <span class="artist"> on homepage feature
+  .artist {
+    font-size: 0.65em;
+    font-style: italic;
+    letter-spacing: 0;
+    font-variant-caps: normal;
+    font-feature-settings: normal;
+  }
+
+  // Caption and inline small text.
+  small, .caption {
+    @include fontsize(theta, all);
+
+    font-family: unquote(map-get($bodytype, font-family));
+    font-style: normal;
+    font-weight: map-get($bodytype, regular);
+  }
+
+  small {
+    line-height: 1rem;
+  }
+
+  .caption {
+    @include baseline(theta, $headingtype, 2, 2, all);
+
+    color: $captionColour;
+  }
+
 }
