@@ -6,7 +6,7 @@ price: $1000
 date_completed:
 
 image:
-  url: 'img-1.jpg'
+  url: 'tree-o.jpg'
   width:
   height:
 

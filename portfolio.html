@@ -6,13 +6,16 @@ title: Portfolio
 <ul class="list list--posts">
   {% for work in site.works %}
     <li>
-      <div class="work-thumbail-wrapper figure--center">
-        <a class=work-link" href="{{ work.url }}">
-          <img class="image" src="{{ work.image.url | prepend: site.image_serve_path }}" alt="{{ work.title }}">
-          <h3>{{ work.title }}</h3>
-        </a>
-        <p>{{ work.materials }}</p>
-      </div>
+        <div class="grid-x grid-margin-x">
+            <div class="medium-8 cell">
+              <a class="work-link" href="{{ work.url }}">
+                <img class="image" src="{{ work.image.url | prepend: site.image_serve_path }}" alt="{{ work.title }}">
+              </a>
+            </div>
+            <div class="medium-4 cell">
+              <h3>{{ work.title }}</h3>
+              <p>{{ work.materials }}</p>
+          </div>
     </li>
   {% endfor %}
 </ul>
