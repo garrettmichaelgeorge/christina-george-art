@@ -1,7 +1,6 @@
 ---
-title: false
-styles: true
 ---
 
-@import "alembic";
-@import "custom";
+@import 'foundation';
+@include foundation-everything;
+@import 'custom';

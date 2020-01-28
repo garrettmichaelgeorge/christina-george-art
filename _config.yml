@@ -1,5 +1,4 @@
 # Set theme
-theme: alembic-jekyll-theme
 
 # File excludes
 exclude:
@@ -14,7 +13,6 @@ plugins:
 - jekyll-paginate
 - jekyll-seo-tag
 - jekyll-redirect-from
-- jekyll-default-layout
 - jekyll-feed
 - jemoji
 
@@ -32,7 +30,7 @@ sitemap: true
 # Jekyll Settings
 sass:
   style: compressed
-css_inline: true
+css_inline: false
 permalink: pretty
 
 compress_html: # http://jch.penibelst.de/
@@ -46,21 +44,6 @@ compress_html: # http://jch.penibelst.de/
 # Pagination
 paginate: 5
 paginate_path: blog/page:num
-
-# Header nav
-navigation_header:
-- title: Home
-  url: /
-- title: About
-  url: "#about"
-- title: Portfolio
-  url: /portfolio
-
-# Footer nav
-navigation_footer:
-- title: Back to top
-  url: "#top"
-- title: Created by Garrett George
 
 # Content
 image_serve_path: "/assets/images/" # <img src="{{ site.image_serve_path }}/projects/img.jpg">
