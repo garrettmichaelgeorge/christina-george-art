@@ -1,8 +1,25 @@
 // Custom additions to Foundation base
 
-.feature {
+// Top Bar Nav
+.top-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: none;
+  .menu {
+    background: none
+  }
+  a {
+    color: #0a0a0a;
+  }
+}
+
+// Hero Text
+
+header {
   text-align: left;
   h1 {
+    font-size: rem-calc(64);
     font-variant-caps: all-small-caps;
     font-feature-settings: 'smcp', 'liga', 'lnum', 'kern';
     letter-spacing: 0.065em;
@@ -15,11 +32,15 @@
 
 
   // Styling <span class="artist"> on homepage feature
-  .artist {
-    font-size: 0.65em;
-    font-style: italic;
-    letter-spacing: 0;
-    font-variant-caps: normal;
-    font-feature-settings: normal;
-  }
+.artist {
+  font-size: 0.65em;
+  font-style: italic;
+  letter-spacing: 0;
+  font-variant-caps: normal;
+  font-feature-settings: normal;
+}
 
+
+.thumbnail img {
+//  max-height: 80vh;
+}

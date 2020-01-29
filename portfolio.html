@@ -1,28 +1,19 @@
----
-layout: page
-title: Portfolio
----
-<section class="grid-container">
-
   {% for work in site.works %}
 
-    <figure class="grid-x grid-margin-x grid-padding-y align-left">
-      <div class="cell medium-9">
-        <a class="thumbnail" href="{{ work.url }}">
-          <img class="image" src="{{ work.image.url | prepend: site.image_serve_path }}" alt="{{ work.title }}">
-        </a>
-      </div>
-      <div class="cell medium-3 align-self-bottom">
-        <h3>{{ work.title }}</h3>
-        <p>
-          {{ work.materials }}<br />
-          {{ work. dimensions }}
-        </p>
-      </div>
-    </figure>
+  <figure class="grid-x grid-margin-x grid-padding-y {% cycle "align-left", "align-right" %}">
+    <div class="cell medium-8 {% cycle "small-order-1", "small-order-2" %}">
+      <a class="thumbnail" href="{{ work.url }}">
+        <img class="image" src="{{ work.image.url | prepend: site.image_serve_path }}" alt="{{ work.title }}">
+      </a>
+    </div>
+    <div class="cell medium-4 align-self-bottom {% cycle "text-left small-order-2", "text-right small-order-1" %}">
+      <h3>{{ work.title }}</h3>
+      <p>
+        {{ work.materials }}<br />
+        {{ work.dimensions }}
+      </p>
+    </div>
+  </figure>
 
-    {% endfor %}
-
-</section>
-
+  {% endfor %}
 

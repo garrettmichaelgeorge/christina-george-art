@@ -1,18 +1,13 @@
 ---
 title: Home
-layout: page
+layout: default
 feature_image: tree-o.jpg
 feature_text: Christina<br>George&nbsp;<span class="artist">artist</span>
 ---
 
-<p>Christina George is a painter, scholar, and musician living in Cincinnati, OH.</p>
-
-<section class="section portfolio-section">
-  <h2 id="portfolio">Portfolio</h2>
-  <p>Portfolio content goes here.</p>
-</section>
-
-<section class="section portfolio-section">
-  <h2 id="contact">Contact</h2>
-  <p>I would love to hear from you. Please contact me at christinajoy.george@gmail.com.</p>
-</section>
+{% for section in site.data.sections %}
+<section id="{{ section.title | downcase }}" class="section section--{{ section.title | downcase }} grid-container">
+  <h2 class="section-title">{{ section.title }}</h2>
+    {% include_relative {{ section.filename }} %}
+  </section>
+{% endfor %}

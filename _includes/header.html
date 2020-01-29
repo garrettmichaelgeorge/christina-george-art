@@ -1,6 +1,24 @@
 {% include head.html %}
 
-<header>
-<small><i>header</i></small>
-{% include components/nav-menu.html %}
+<div class="top-bar topbar-responsive">
+
+  <!-- Site Logo -->
+  <div class="top-bar-title">
+    <a class="topbar-responsive-logo" href="/">Christina George</a>
+  </div>
+
+  <!-- Nav -->
+  <div class="top-bar-right">
+    {% include components/nav-menu.html %}
+  </div>
+
+</div>
+
+<header id="header" class="topbar-sticky-shrink-header" style="height: 100vh;
+                                                               background: url({{ site.image_serve_path }}tree-o.jpg) center center no-repeat;
+                                                               background-size: cover;">
+  <div class="grid-container">
+    <h1 class="">Christina<br>George&nbsp;<span class="artist">artist</span></h1>
+  </div>
 </header>
+
