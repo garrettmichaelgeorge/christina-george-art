@@ -1,5 +1,9 @@
-# Starter kit for [Alembic](https://alembic.darn.es/) with Netlify CMS
+# Christina George Artist Portfolio Website
 
-This is a very simple starting point if you wish to use Alembic [as a Jekyll theme gem](https://alembic.darn.es/#as-a-jekyll-theme) with Netlify CMS.
+Built using Jekyll and Foundation 6. Hosted on Netlify. Body text is set in Garamond Premier
+Pro, and headings are set in Garamond Premier Pro Display, both by Robert
+Slimbach.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/daviddarnes/alembic-netlifycms-kit&stack=cms)
+The site's code repository is open source. All site content ©2020 Christina George. All rights reserved.
+
+Check out the site at [https://christinageorgeart.com].
