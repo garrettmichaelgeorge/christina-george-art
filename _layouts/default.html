@@ -1,14 +1,22 @@
 ---
 layout: compress
 ---
+<!doctype html>
+<html class="no-js" lang="{{ site.language}}">
 
+{% include head.html %}
+
+<body>
 
 {% include header.html %}
 
 <main class="grid-container" role="main">
-
-{{ content }}
-
+    {{ content }}
 </main>
 
 {% include footer.html %}
+
+{% include foot.html %}
+
+</body>
+</html>

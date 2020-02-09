@@ -2,39 +2,37 @@
 layout: default
 ---
 
-<figure class="image-wrapper">
+<div class="grid-container">
+  <div class="grid-x">
+    <div class="cell small-8">
+      <figure class="image-wrapper">
 
-  <!-- Image -->
+        <!-- Image -->
 
-  <img src="{{ page.image.url | prepend: site.image_serve_path }}">
+        <img src="{{ page.image.url | prepend: site.image_serve_path }}">
 
-  {% for image in entry.images %}
+        {% for image in entry.images %}
 
-    <figure class="image-wrapper {{ image.positioning }}">
-      <img class="{{ image.border }}" src="{{ image.url | prepend: site.image_serve_path }}" alt="{{ stored_description | normalize_whitespace }}">
-      {% if image.caption %}
-        <figcaption>{{ image.caption }}</figcaption>
-      {% endif %}
-    </figure>
+        <figure class="image-wrapper {{ image.positioning }}">
+          <img class="{{ image.border }}" src="{{ image.url | prepend: site.image_serve_path }}"
+            alt="{{ stored_description | normalize_whitespace }}">
+          {% if image.caption %}
+          <figcaption>{{ image.caption }}</figcaption>
+          {% endif %}
+        </figure>
 
-  {% endfor %}
+        {% endfor %}
 
+        <!-- Title -->
+        <figcaption>{{ page.title }}</figcaption>
 
+        <!-- Materials -->
+        <figcaption>{{ page.materials }}</figcaption>
 
+        <!-- Dimensions -->
+        <figcaption>{{ page.dimensions }}</figcaption>
 
-
-
-
-  <!-- Title -->
-  <figcaption>{{ page.title }}</figcaption>
-
-  <!-- Materials -->
-  <figcaption>{{ page.materials }}</figcaption>
-
-  <!-- Dimensions -->
-  <figcaption>{{ page.dimensions }}</figcaption>
-
-  <!-- Price -->
-  <figcaption>{{ page.price }}</figcaption>
-
-</figure>
+      </figure>
+    </div>
+  </div>
+</div>

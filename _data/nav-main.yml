@@ -1,8 +1,14 @@
-- link: About
+- title: About
+  show_title?: false
   url: /#about
+  filename: about.html
 
-- link: Portfolio
+- title: Portfolio
+  show_title?: true
   url: /#portfolio
+  filename: portfolio.html
 
-- link: Contact
+- title: Contact
+  show_title?: true
   url: /#contact
+  filename: contact.html

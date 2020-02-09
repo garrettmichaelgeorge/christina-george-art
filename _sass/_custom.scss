@@ -2,22 +2,31 @@
 
 // Top Bar Nav
 .top-bar {
-  position: absolute;
-  left: 0;
-  right: 0;
+  //   position: absolute;
+  //   left: 0;
+  //   right: 0;
   background: none;
+
   .menu {
     background: none
   }
+
   a {
     color: #0a0a0a;
   }
 }
 
+.sticky-container {
+  height: 0;
+}
+
 // Hero Text
 
-header {
+.hero {
   text-align: left;
+  height: 100vh;
+  background-size: cover;
+
   h1 {
     font-size: rem-calc(64);
     font-variant-caps: all-small-caps;
@@ -31,7 +40,7 @@ header {
 }
 
 
-  // Styling <span class="artist"> on homepage feature
+// Styling <span class="artist"> on homepage feature
 .artist {
   font-size: 0.65em;
   font-style: italic;
@@ -45,7 +54,54 @@ header {
   min-height: 100vh;
 }
 
+.section--about {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.section--portfolio {
+  .figure {
+    padding-bottom: rem-calc(160);
+  }
+}
+
+.figcaption.small-order-1 {
+  justify-content: flex-end;
+}
+
+
+
+
+
+.section--about .h1 {
+  font-size: 48px;
+  font-weight: 400;
+}
+
+.section--portfolio {
+  figure {
+
+    h3,
+    p {
+      font-family: $body-font-family;
+      font-size: $global-font-size * 1.25;
+      line-height: $global-lineheight;
+      margin-bottom: 0;
+    }
+  }
+}
+
+abbr,
+.small-caps {
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.03em;
+  cursor: text;
+  text-decoration: none;
+  border: none;
+}
 
 .thumbnail img {
-//  max-height: 80vh;
+  //  max-height: 80vh;
 }

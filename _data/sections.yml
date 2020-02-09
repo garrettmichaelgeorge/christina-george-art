@@ -1,9 +1,12 @@
 - title: About
+  show_title?: false
   filename: about.html
 
 - title: Portfolio
+  show_title?: true
   filename: portfolio.html
 
 - title: Contact
+  show_title?: true
   filename: contact.html
 

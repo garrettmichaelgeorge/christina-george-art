@@ -1,13 +1,15 @@
 ---
 title: Home
 layout: default
-feature_image: tree-o.jpg
+hero_image: kindred-spirits.jpg
 feature_text: Christina<br>George&nbsp;<span class="artist">artist</span>
 ---
 
-{% for section in site.data.sections %}
-<section id="{{ section.title | downcase }}" class="section section--{{ section.title | downcase }} grid-container">
-  <h2 class="section-title">{{ section.title }}</h2>
+{% for section in site.data.nav-main %}
+<section id="{{ section.title | downcase }}" class="section section--{{ section.title | downcase }}">
+
     {% include_relative {{ section.filename }} %}
-  </section>
+
+</section>
+<hr/>
 {% endfor %}

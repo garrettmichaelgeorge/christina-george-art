@@ -30,7 +30,7 @@ sitemap: true
 # Jekyll Settings
 sass:
   style: compressed
-css_inline: false
+css_inline: true
 permalink: pretty
 
 compress_html: # http://jch.penibelst.de/
@@ -46,6 +46,7 @@ paginate: 5
 paginate_path: blog/page:num
 
 # Content
+asset_serve_path: "/assets/" 
 image_serve_path: "/assets/images/" # <img src="{{ site.image_serve_path }}/projects/img.jpg">
 
 # Collections
@@ -56,6 +57,17 @@ collections:
     description: "Paintings and drawings"
     feature_text: |
       Portfolio
+    order:
+      - inhale.md
+      - kindred-spirits.md
+      - february-ink-sketch.md
+      - february-ink-wash.md
+      - february.md
+      - lenten-i.md
+      - lenten-ii.md
+      - lenten-iii.md
+      - lenten-iv.md
+      - lenten-v.md
 
   posts:
     title: Posts

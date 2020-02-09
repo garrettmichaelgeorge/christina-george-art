@@ -1,19 +1,25 @@
+  <div class="grid-y">
+  <h2 class="section-title h1">Portfolio</h2>
   {% for work in site.works %}
 
-  <figure class="grid-x grid-margin-x grid-padding-y {% cycle "align-left", "align-right" %}">
-    <div class="cell medium-8 {% cycle "small-order-1", "small-order-2" %}">
+  <figure class="figure cell grid-x grid-margin-x {% cycle "align-left", "align-right" %}">
+    <div class="thumbnail-wrapper cell medium-8 align-self-bottom {% cycle "small-order-1", "small-order-2" %}">
       <a class="thumbnail" href="{{ work.url }}">
         <img class="image" src="{{ work.image.url | prepend: site.image_serve_path }}" alt="{{ work.title }}">
+        <!-- <img src="/img/blank.png" alt="{{ work.title }}" data-echo="{{ work.image.url | prepend: site.image_serve_path }}"> -->
       </a>
     </div>
-    <div class="cell medium-4 align-self-bottom {% cycle "text-left small-order-2", "text-right small-order-1" %}">
-      <h3>{{ work.title }}</h3>
-      <p>
-        {{ work.materials }}<br />
-        {{ work.dimensions }}
-      </p>
-    </div>
+    <figcaption
+      class="flex-container align-justify figcaption cell medium-4 align-self-bottom {% cycle "align-self-left small-order-2", "align-self-right small-order-1" %}">
+      <div class="container">
+        <h3>{{ work.title }}</h3>
+        <p>
+          {{ work.materials }}<br />
+          {{ work.dimensions }}
+        </p>
+      </div>
+    </figcaption>
   </figure>
 
   {% endfor %}
-
+  </div>
