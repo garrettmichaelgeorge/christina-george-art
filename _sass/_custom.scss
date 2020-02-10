@@ -11,9 +11,9 @@
     background: none
   }
 
-  a {
-    color: #0a0a0a;
-  }
+  // a {
+  //   color: #0a0a0a;
+  // }
 }
 
 .sticky-container {
@@ -28,9 +28,9 @@
   background-size: cover;
 
   h1 {
+    font-family: garamond-premier-pro-display;
     font-size: rem-calc(64);
     font-variant-caps: all-small-caps;
-    font-feature-settings: 'smcp', 'liga', 'lnum', 'kern';
     letter-spacing: 0.065em;
     line-height: 0.65;
     position: absolute;
@@ -73,10 +73,15 @@
 
 
 
+/* Typography */
+
+body {
+  font-feature-settings: 'liga', 'kern', 'onum';
+}
 
 
 .section--about .h1 {
-  font-size: 48px;
+  font-size: rem-calc(48);
   font-weight: 400;
 }
 
@@ -85,10 +90,13 @@
 
     h3,
     p {
-      font-family: $body-font-family;
-      font-size: $global-font-size * 1.25;
-      line-height: $global-lineheight;
+      // font-family: $body-font-family;
+      // font-size: $global-font-size * 1.25;
       margin-bottom: 0;
+    }
+    h3 {
+      font-size: 1.25rem;
+      color: #252525
     }
   }
 }
@@ -104,4 +112,12 @@ abbr,
 
 .thumbnail img {
   //  max-height: 80vh;
+}
+
+.menu a {
+  font-family: sofia-pro-soft, 'Helvetica Neue', helvetica, sans-serif;
+  font-weight: 300;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+
 }

@@ -81,13 +81,15 @@ $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
-$body-font-color: #202020;
-$body-font-family: garamond-premier-pro, 'Hoefler Text', Georgia, serif;
+$body-background: #DEE7E9;
+$body-font-color: #636363;
+// $body-font-family: orpheuspro, garamond-premier-pro, 'Hoefler Text', Georgia, serif;
+$body-font-family: sofia-pro, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-position: 1rem;
-$global-weight-normal: normal;
+$global-weight-normal: 300;
 $global-weight-bold: bold;
 $global-radius: 0;
 $global-menu-padding: 0.7rem 1rem;
@@ -131,11 +133,11 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: garamond-premier-pro-display;
+$header-font-family: orpheuspro, garamond-premier-pro-display, serif;
 $header-font-weight: 300;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: inherit;
+$header-color: #171717;
 $header-lineheight: 1.18;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
@@ -168,7 +170,7 @@ $code-font-weight: $global-weight-normal;
 $code-background: $light-gray;
 $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
-$anchor-color: $primary-color;
+$anchor-color: $black;
 $anchor-color-hover: scale-color($anchor-color, $lightness: -64%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: overline;
@@ -195,7 +197,8 @@ $keystroke-color: $black;
 $keystroke-background: $light-gray;
 $keystroke-padding: rem-calc(2 4 0);
 $keystroke-radius: $global-radius;
-$abbr-underline: 1px dotted $black;
+// $abbr-underline: 1px dotted $black;
+$abbr-underline: none;
 
 // 5. Typography Helpers
 // ---------------------
@@ -813,14 +816,15 @@ $tab-content-padding: 1rem;
 $thumbnail-border: 4px solid $white;
 $thumbnail-margin-bottom: $global-margin;
 $thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
-$thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
+// $thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
+$thumbnail-shadow-hover: 0 0 8px 2px rgba($dark-gray, 0.5);
 $thumbnail-transition: box-shadow 200ms ease-out;
 $thumbnail-radius: $global-radius;
 
 // 53. Title Bar
 // -------------
 
-$titlebar-background: $black;
+$titlebar-background: $white;
 $titlebar-color: $white;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
@@ -847,7 +851,7 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 1rem 2rem;
-$topbar-background: $light-gray;
+$topbar-background: none;
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;

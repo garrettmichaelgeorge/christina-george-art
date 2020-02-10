@@ -9,7 +9,8 @@
                {% endif %}
                >
   <div data-sticky-container>
-    <header id="top-bar" class="top-bar topbar-responsive" data-sticky data-margin=0>
+    <header id="top-bar" class="top-bar" data-sticky data-options="marginTop:0;" style="width:100%">
+
       <!-- Site Logo -->
       {% if page.title != "Home" %}
       <div class="top-bar-left">
@@ -29,6 +30,7 @@
           </ul>
         </nav>
       </div>
+
     </header>
   </div>
 
