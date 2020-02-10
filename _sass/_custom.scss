@@ -1,5 +1,12 @@
 // Custom additions to Foundation base
 
+main {
+  /* CSS Gradient Tool: https://cssgradient.io */
+  background: rgb(166,156,163);
+  background: linear-gradient(0deg, rgba(166,156,163,1) 0%, rgba(199,215,217,0.5) 19%, rgba(199,215,217,0.5) 88%, rgba(242,224,220,1) 100%); 
+}
+
+
 // Top Bar Nav
 .top-bar {
   //   position: absolute;
@@ -71,6 +78,16 @@
   justify-content: flex-end;
 }
 
+/* Footer */
+
+.footer {
+  background-color: #314043;
+  height: 12em;
+  * {
+    color: $light-gray;
+  }
+}
+
 
 
 /* Typography */
@@ -80,12 +97,17 @@ body {
 }
 
 
-.section--about .h1 {
+.about-content h1 {
   font-size: rem-calc(48);
   font-weight: 400;
 }
 
+
 .section--portfolio {
+  .section-title {
+    padding-bottom: 1em;
+  }
+
   figure {
 
     h3,
@@ -94,12 +116,21 @@ body {
       // font-size: $global-font-size * 1.25;
       margin-bottom: 0;
     }
+
     h3 {
       font-size: 1.25rem;
       color: #252525
     }
   }
 }
+
+.section-title {
+  font-size: rem-calc(200);
+  color: $medium-gray;
+  text-transform: lowercase;
+}
+
+
 
 abbr,
 .small-caps {
@@ -119,5 +150,9 @@ abbr,
   font-weight: 300;
   text-transform: lowercase;
   letter-spacing: 1px;
+}
 
+.is-active {
+  font-weight: 700;
+  // font-style: italic;
 }

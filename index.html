@@ -6,10 +6,10 @@ intro_text: Christina George is an artist, musicologist, and pianist living in C
 ---
 
 {% for section in site.data.nav-main %}
-<section id="{{ section.title | downcase }}" class="section section--{{ section.title | downcase }}">
+{% assign title = section.title | downcase %}
+<section id="{{ title }}" class="section section--{{ title }}" data-magellan-target="{{ title }}">
 
     {% include_relative {{ section.filename }} %}
 
 </section>
-<hr/>
 {% endfor %}
