@@ -4,10 +4,11 @@ main {
   /* CSS Gradient Tool: https://cssgradient.io */
   background: rgb(166, 156, 163);
   background: linear-gradient(0deg, rgba(166, 156, 163, 1) 0%, rgba(199, 215, 217, 0.3) 19%, rgba(199, 215, 217, 0.3) 80%, rgba(242, 224, 220, 1) 100%);
+  min-height: 100vh;
 }
 
 
-// Top Bar Nav
+/* Top Bar Nav */
 .top-bar {
   //   position: absolute;
   //   left: 0;
@@ -18,18 +19,26 @@ main {
     background: none
   }
 
+  .top-bar-right {
+    justify-content: flex-end;
+  }
+
   // a {
   //   color: #0a0a0a;
   // }
 }
 
 .sticky-container {
-  height: 0;
+  // height: 0;
+}
+
+.sticky {
+  // width: 100%
 }
 
 // Hero Text
 
-.hero {
+.hero-container {
   text-align: left;
   height: 100vh;
   background-size: cover;
@@ -82,11 +91,16 @@ main {
 
 .footer {
   background-color: #314043;
-  height: 12em;
+  
 
   * {
     color: $light-gray;
   }
+}
+
+.footer-nav {
+  min-height: 12em;
+  padding-bottom: 2em;
 }
 
 
@@ -110,6 +124,7 @@ body {
 
 .section--portfolio {
   .section-title {
+    line-height: 1.1;
     padding-bottom: 1em;
   }
 

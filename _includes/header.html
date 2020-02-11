@@ -1,52 +1,54 @@
-<!-- <div class="title-bar" data-responsive-toggle="top-bar">
-  <button class="menu-icon" type="button" data-toggle></button>
-</div> -->
+<div id="hero" class="hero-container" style="
+                {% if page.title == 'Home' %} 
+                    background: url({{ page.hero_image | prepend: site.image_serve_path }}) center center/cover no-repeat 
+                  {% else %}
+                    height: 0
+                {% endif %}
+                ">
+  <!-- Sticky Container -->
+  <!-- <div class="sticky-container" data-sticky-container> -->
+  <header id="top-bar" class="top-bar" data-sticky-container>
 
-<div id="hero" class="hero topbar-sticky-shrink-header" {% if page.title == "Home" %} style="background: url({{ page.hero_image | prepend: site.image_serve_path }}) center center no-repeat;
-                                                                background-size: cover;" {% endif %}>
-  <div data-sticky-container>
-    <header id="top-bar" class="top-bar" data-sticky data-options="marginTop:0;" style="width:100%">
-
-      <!-- Site Logo -->
-      <div class="top-bar-left">
-        <div class="top-bar-title">
-          <a class="topbar-responsive-logo" href="/">Christina George</a>
-        </div>
+    <!-- Site Logo -->
+    <div class="top-bar-left sticky" data-sticky data-sticky-on="small" data-anchor="hero" data-options="marginTop:0;">
+      <div class="top-bar-title">
+        <!-- <ul class="menu"> -->
+        <a class="topbar-responsive-logo" href="/">Christina George</a>
+        <!-- </ul> -->
       </div>
+    </div>
 
-
+    <!-- Hamburger icon -->
+    <div class="top-bar-right flex-container sticky" data-sticky data-sticky-on="small" data-anchor=""
+      data-options="marginTop:1;">
       <button class="menu-icon" type="button" data-toggle="offCanvas"></button>
+    </div>
 
-    </header>
+  </header>
 
-      <!-- Off-Canvas Menu -->
-      <div class="off-canvas-wrapper">
-        <div class="off-canvas position-right" id="offCanvas" data-off-canvas>
-          <!-- Close Button -->
-          <button class="close-button" aria-label="Close menu" type="button" data-close>
-            <span aria-hidden="true">&times;</span>
-          </button>
-
-          <!-- <div class="top-bar-right"> -->
-
-          <!-- Navigation -->
-          <nav>
-            <ul class="menu vertical" data-magellan data-animation-easing="swing" data-offset="0">
-              {% for item in site.data.nav-main %}
-              <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-              {% endfor %}
-            </ul>
-          </nav>
-          <!-- </div> -->
-        </div>
-      </div>
-
-    <!-- </header> -->
-  </div>
-
-
-  <div class="grid-container hide-for-small-only">
-    <h1 class="">Christina<br>George&nbsp;<span class="artist">artist</span></h1>
-  </div>
-
+<!-- <div class="grid-container hide-for-small-only">
+  <h1 class="">Christina<br>George&nbsp;<span class="artist">artist</span></h1>
+</div> -->
 </div>
+
+  <!-- Off-Canvas Menu -->
+  <div class="off-canvas-wrapper">
+    <div class="off-canvas position-right" id="offCanvas" data-off-canvas>
+      <!-- Close Button -->
+      <button class="close-button" aria-label="Close menu" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+      </button>
+
+
+      <!-- Navigation -->
+      <nav role="navigation">
+        <ul class="menu vertical" data-magellan data-animation-easing="swing" data-offset="0">
+          {% for item in site.data.nav-main %}
+          <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+
+  </div>
+

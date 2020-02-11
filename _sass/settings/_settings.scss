@@ -483,7 +483,7 @@ $menu-item-color-active: $white;
 $menu-item-color-alt-active: $black;
 $menu-item-background-active: get-color(primary);
 $menu-icon-spacing: 0.25rem;
-$menu-state-back-compat: false;
+$menu-state-back-compat: true;
 $menu-centered-back-compat: true;
 $menu-icons-back-compat: true;
 
@@ -501,14 +501,14 @@ $meter-fill-bad: $alert-color;
 // --------------
 
 $offcanvas-sizes: (
-  // small: 250px,
-  small: 100vw,
+  small: 250px,
+  // small: 100vw,
 );
 $offcanvas-vertical-sizes: (
   // small: 250px,
   small: 100vh,
-  medium: 100vh,
-  large: 100vh,
+  // medium: 100vh,
+  // large: 100vh,
 );
 $offcanvas-background: $light-gray;
 $offcanvas-shadow: 0 0 10px rgba($black, 0.7);
@@ -834,7 +834,7 @@ $titlebar-background: $white;
 $titlebar-color: $black;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
-$titlebar-icon-color: $medium-gray;
+$titlebar-icon-color: $dark-gray;
 $titlebar-icon-color-hover: $medium-gray;
 $titlebar-icon-spacing: 0.25rem;
 
@@ -859,9 +859,10 @@ $tooltip-radius: $global-radius;
 $topbar-padding: 1rem 2rem;
 $topbar-background: transparent;
 $topbar-submenu-background: $topbar-background;
-$topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
+// $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
+$topbar-title-spacing: 1rem 0 0 0;
 $topbar-input-width: 200px;
-$topbar-unstack-breakpoint: medium;
+$topbar-unstack-breakpoint: small;
 
 // 56. Xy Grid
 // -----------

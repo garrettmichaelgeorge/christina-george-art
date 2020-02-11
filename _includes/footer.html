@@ -2,17 +2,17 @@
 <footer class="footer">
   <div class="grid-container">
     <div class="footer-nav grid-x grid-padding-x">
-      <div class="medium-9">
-        <p>Christina George</p>
-        <small>&#169;2020 Christina George. All Rights Reserved.</small>
+      <div class="cell medium-8 align-self-bottom">
+          <p>Christina George</p>
+          <small>&#169;2020 Christina George. All Rights Reserved.</small>
 
       </div>
 
-      <div class="medium-3">
+      <div class="cell medium-4">
         <nav>
           <ul class="menu">
-            {% for item in site.data.nav-footer %}
-            <li><a href="{{ item.url }}">{{ item.link }}</a></li>
+            {% for item in site.data.nav-main %}
+            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
             {% endfor %}
           </ul>
         </nav>
