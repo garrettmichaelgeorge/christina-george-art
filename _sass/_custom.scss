@@ -2,8 +2,8 @@
 
 main {
   /* CSS Gradient Tool: https://cssgradient.io */
-  background: rgb(166,156,163);
-  background: linear-gradient(0deg, rgba(166,156,163,1) 0%, rgba(199,215,217,0.5) 19%, rgba(199,215,217,0.5) 88%, rgba(242,224,220,1) 100%); 
+  background: rgb(166, 156, 163);
+  background: linear-gradient(0deg, rgba(166, 156, 163, 1) 0%, rgba(199, 215, 217, 0.3) 19%, rgba(199, 215, 217, 0.3) 80%, rgba(242, 224, 220, 1) 100%);
 }
 
 
@@ -83,6 +83,7 @@ main {
 .footer {
   background-color: #314043;
   height: 12em;
+
   * {
     color: $light-gray;
   }
@@ -150,9 +151,10 @@ abbr,
   font-weight: 300;
   text-transform: lowercase;
   letter-spacing: 1px;
-}
 
-.is-active {
-  font-weight: 700;
-  // font-style: italic;
+  .is-active {
+    font-weight: bold;
+    color: green;
+    // font-style: italic;
+  }
 }

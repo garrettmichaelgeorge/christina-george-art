@@ -1,20 +1,24 @@
 <!-- Footer -->
-<footer class="footer footer-nav grid-x grid-padding-x">
-  <div class="medium-9">
-    <p>Christina George</p>
-    <small>&#169;2020 Christina George. All Rights Reserved.</small>
+<footer class="footer">
+  <div class="grid-container">
+    <div class="footer-nav grid-x grid-padding-x">
+      <div class="medium-9">
+        <p>Christina George</p>
+        <small>&#169;2020 Christina George. All Rights Reserved.</small>
 
+      </div>
+
+      <div class="medium-3">
+        <nav>
+          <ul class="menu">
+            {% for item in site.data.nav-footer %}
+            <li><a href="{{ item.url }}">{{ item.link }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+
+    </div>
   </div>
-
-  <div class="medium-3">
-    <nav>
-      <ul class="menu">
-        {% for item in site.data.nav-footer %}
-        <li><a href="{{ item.url }}">{{ item.link }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
-  </div>
-
 </footer>
 <!-- /Footer -->

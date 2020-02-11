@@ -2,33 +2,36 @@
   <button class="menu-icon" type="button" data-toggle></button>
 </div>
 
-<div id="hero" class="hero topbar-sticky-shrink-header" 
-               {% if page.title == "Home" %} 
-                  style="background: url({{ page.hero_image | prepend: site.image_serve_path }}) center center no-repeat;
-                                                                background-size: cover;" 
-               {% endif %}
-               >
+<div id="hero" class="hero topbar-sticky-shrink-header" {% if page.title == "Home" %} style="background: url({{ page.hero_image | prepend: site.image_serve_path }}) center center no-repeat;
+                                                                background-size: cover;" {% endif %}>
   <div data-sticky-container>
     <header id="top-bar" class="top-bar" data-sticky data-options="marginTop:0;" style="width:100%">
 
       <!-- Site Logo -->
-      {% if page.title != "Home" %}
       <div class="top-bar-left">
         <div class="top-bar-title">
           <a class="topbar-responsive-logo" href="/">Christina George</a>
         </div>
       </div>
-      {% endif %}
 
       <!-- Navigation -->
-      <div class="top-bar-right">
-        <nav>
-          <ul class="menu" data-magellan data-animation-easing="swing">
-            {% for item in site.data.nav-main %}
-            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-            {% endfor %}
-          </ul>
-        </nav>
+
+      <button class="menu-icon" type="button" data-toggle="offCanvas"></button>
+      <button class="close-button" aria-label="Close menu" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+      </button>
+
+
+      <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
+        <div class="top-bar-right">
+          <nav>
+            <ul class="menu vertical medium-horizontal" data-magellan data-animation-easing="swing" data-offset="0">
+              {% for item in site.data.nav-main %}
+              <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
       </div>
 
     </header>

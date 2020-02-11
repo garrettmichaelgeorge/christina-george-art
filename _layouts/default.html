@@ -8,17 +8,20 @@ layout: compress
 
 <body>
 
-{% include header.html %}
+    {% include header.html %}
 
-<main class="" role="main">
-    <div class="grid-container">
-    {{ content }}
+    <div class="off-canvas-content" data-off-canvas-content>
+        <main class="" role="main">
+            <div class="grid-container">
+                {{ content }}
+            </div>
+        </main>
     </div>
-</main>
 
-{% include footer.html %}
+    {% include footer.html %}
 
-{% include foot.html %}
+    {% include foot.html %}
 
 </body>
+
 </html>

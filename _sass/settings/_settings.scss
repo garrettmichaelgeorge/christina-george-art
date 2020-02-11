@@ -170,10 +170,12 @@ $code-font-weight: $global-weight-normal;
 $code-background: $light-gray;
 $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
-$anchor-color: $black;
-$anchor-color-hover: scale-color($anchor-color, $lightness: -64%);
+// $anchor-color: $primary-color;
+$anchor-color: $body-font-color;
+// $anchor-color-hover: scale-color($anchor-color, $lightness: -64%);
+$anchor-color-hover: $black;
 $anchor-text-decoration: none;
-$anchor-text-decoration-hover: overline;
+$anchor-text-decoration-hover: underline;
 $hr-width: $global-width;
 $hr-border: 1px solid $medium-gray;
 $hr-margin: rem-calc(20) auto;
@@ -477,11 +479,13 @@ $menu-margin: 0;
 $menu-nested-margin: $global-menu-nested-margin;
 $menu-items-padding: $global-menu-padding;
 $menu-simple-margin: 1rem;
-$menu-item-color-active: $white;
-$menu-item-color-alt-active: $black;
+// $menu-item-color-active: $white;
+$menu-item-color-active: green;
+// $menu-item-color-alt-active: $black;
+$menu-item-color-alt-active: red;
 $menu-item-background-active: get-color(primary);
 $menu-icon-spacing: 0.25rem;
-$menu-state-back-compat: true;
+$menu-state-back-compat: false;
 $menu-centered-back-compat: true;
 $menu-icons-back-compat: true;
 
@@ -825,10 +829,10 @@ $thumbnail-radius: $global-radius;
 // -------------
 
 $titlebar-background: $white;
-$titlebar-color: $white;
+$titlebar-color: $black;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
-$titlebar-icon-color: $white;
+$titlebar-icon-color: $medium-gray;
 $titlebar-icon-color-hover: $medium-gray;
 $titlebar-icon-spacing: 0.25rem;
 
@@ -851,7 +855,7 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 1rem 2rem;
-$topbar-background: none;
+$topbar-background: transparent;
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
