@@ -93,6 +93,10 @@ main {
 
 /* Typography */
 
+* {
+  word-wrap: break-word;
+}
+
 body {
   font-feature-settings: 'liga', 'kern', 'onum';
 }

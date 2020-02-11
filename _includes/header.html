@@ -1,6 +1,6 @@
-<div class="title-bar" data-responsive-toggle="top-bar">
+<!-- <div class="title-bar" data-responsive-toggle="top-bar">
   <button class="menu-icon" type="button" data-toggle></button>
-</div>
+</div> -->
 
 <div id="hero" class="hero topbar-sticky-shrink-header" {% if page.title == "Home" %} style="background: url({{ page.hero_image | prepend: site.image_serve_path }}) center center no-repeat;
                                                                 background-size: cover;" {% endif %}>
@@ -14,31 +14,38 @@
         </div>
       </div>
 
-      <!-- Navigation -->
 
       <button class="menu-icon" type="button" data-toggle="offCanvas"></button>
-      <button class="close-button" aria-label="Close menu" type="button" data-close>
-        <span aria-hidden="true">&times;</span>
-      </button>
 
+    </header>
 
-      <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
-        <div class="top-bar-right">
+      <!-- Off-Canvas Menu -->
+      <div class="off-canvas-wrapper">
+        <div class="off-canvas position-right" id="offCanvas" data-off-canvas>
+          <!-- Close Button -->
+          <button class="close-button" aria-label="Close menu" type="button" data-close>
+            <span aria-hidden="true">&times;</span>
+          </button>
+
+          <!-- <div class="top-bar-right"> -->
+
+          <!-- Navigation -->
           <nav>
-            <ul class="menu vertical medium-horizontal" data-magellan data-animation-easing="swing" data-offset="0">
+            <ul class="menu vertical" data-magellan data-animation-easing="swing" data-offset="0">
               {% for item in site.data.nav-main %}
               <li><a href="{{ item.url }}">{{ item.title }}</a></li>
               {% endfor %}
             </ul>
           </nav>
+          <!-- </div> -->
         </div>
       </div>
 
-    </header>
+    <!-- </header> -->
   </div>
 
 
-  <div class="grid-container">
+  <div class="grid-container hide-for-small-only">
     <h1 class="">Christina<br>George&nbsp;<span class="artist">artist</span></h1>
   </div>
 
