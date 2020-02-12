@@ -133,7 +133,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: orpheuspro, garamond-premier-pro-display, serif;
+$header-font-family: orpheuspro, serif;
 $header-font-weight: 300;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
@@ -143,7 +143,7 @@ $header-margin-bottom: 0.5rem;
 $header-styles: (
   small: (
     'h1': ('font-size': 24),
-    'h2': ('font-size': 20),
+    'h2': ('font-size': 120),
     'h3': ('font-size': 19),
     'h4': ('font-size': 18),
     'h5': ('font-size': 17),
@@ -151,7 +151,7 @@ $header-styles: (
   ),
   medium: (
     'h1': ('font-size': 72),
-    'h2': ('font-size': 36),
+    'h2': ('font-size': 200),
     'h3': ('font-size': 25),
     'h4': ('font-size': 25),
     'h5': ('font-size': 20),

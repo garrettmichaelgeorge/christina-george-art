@@ -42,9 +42,9 @@
 
       <!-- Navigation -->
       <nav role="navigation">
-        <ul class="menu vertical" data-magellan data-animation-easing="swing" data-offset="0">
+        <ul class="menu vertical" data-magellan data-animation-easing="swing" data-animation-duration="600" data-offset="0">
           {% for item in site.data.nav-main %}
-          <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+          <li><a href="{{ item.url }}" data-close>{{ item.title }}</a></li>
           {% endfor %}
         </ul>
       </nav>
