@@ -55,7 +55,6 @@ main {
   }
 }
 
-
 // Styling <span class="artist"> on homepage feature
 .artist {
   font-size: 0.65em;
@@ -103,8 +102,6 @@ main {
   padding-bottom: 2em;
 }
 
-
-
 /* Typography */
 
 * {
@@ -115,16 +112,21 @@ body {
   font-feature-settings: 'liga', 'kern', 'onum';
 }
 
+.top-bar-title a {
+  font-family: $header-font-family;
+  font-size: 1.5rem;
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.05em;
+  color: $dark-gray;
+}
 
 .about-content h1 {
   font-size: rem-calc(48);
   font-weight: 400;
 }
 
-
 .section--portfolio {
   .section-title {
-    line-height: 1.1;
     padding-bottom: 1em;
   }
 
@@ -146,11 +148,10 @@ body {
 
 .section-title {
   font-size: rem-calc(200);
+  line-height: 1;
   color: $medium-gray;
   text-transform: lowercase;
 }
-
-
 
 abbr,
 .small-caps {
