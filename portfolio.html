@@ -3,14 +3,14 @@
   {% for work in site.works %}
 
   <figure class="figure cell grid-x grid-margin-x {% cycle "align-left", "align-right" %}">
-    <div class="thumbnail-wrapper cell medium-8 align-self-bottom {% cycle "small-order-2", "small-order-1" %}">
+    <div class="thumbnail-wrapper cell medium-8 align-self-bottom {% cycle "medium-order-2", "medium-order-1" %}">
       <div class="thumbnail" href="{{ work.url }}">
         <img class="image" src="{{ work.image.url | prepend: site.image_serve_path }}" alt="{{ work.title }}">
         <!-- <img src="/img/blank.png" alt="{{ work.title }}" data-echo="{{ work.image.url | prepend: site.image_serve_path }}"> -->
       </div>
     </div>
     <figcaption
-      class="flex-container align-justify figcaption cell medium-4 align-self-bottom {% cycle "align-self-right small-order-1", "align-self-left small-order-2" %}">
+      class="flex-container align-justify figcaption cell medium-4 align-self-bottom {% cycle "align-self-right medium-order-1", "align-self-left medium-order-2" %}">
       <div class="container">
         <h3>{{ work.title }}</h3>
         <p>
