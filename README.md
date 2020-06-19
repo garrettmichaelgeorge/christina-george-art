@@ -8,8 +8,4 @@ Body text is set in Sofia Pro Soft by Olivier Gourvat, and headings are set in O
 
 The site's code repository is open source. All site content, including images, &copy; 2020 Christina George. All rights reserved.
 
-<<<<<<< HEAD
-Check out the site at [https://christinageorgeart.com](christinageorgeart.com).
-=======
 Check out the site at [https://christinageorgeart.com](https://christinageorgeart.com).
->>>>>>> 3215aad3ea046a0ee8e9fd8cdd59cad1c32739ae
