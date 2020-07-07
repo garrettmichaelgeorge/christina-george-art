@@ -1,4 +1,5 @@
 # Christina George Artist Portfolio Website
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ad88f65e-0ea5-4e88-92e9-88f128fe9055/deploy-status)](https://app.netlify.com/sites/christinageorgeart/deploys)
 
 [Christinageorgeart.com](https://christinageorgeart.com) is a single-page artist portfolio site built using Jekyll and Foundation 6 and hosted on Netlify.
 
