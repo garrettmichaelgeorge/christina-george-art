@@ -1,13 +1,5 @@
 // Custom additions to Foundation base
 
-main {
-  /* CSS Gradient Tool: https://cssgradient.io */
-  background: rgb(166, 156, 163);
-  background: linear-gradient(0deg, rgba(166, 156, 163, 1) 0%, rgba(199, 215, 217, 0.3) 19%, rgba(199, 215, 217, 0.3) 80%, rgba(242, 224, 220, 1) 100%);
-  min-height: 100vh;
-}
-
-
 /* Top Bar Nav */
 .top-bar {
   //   position: absolute;
@@ -15,9 +7,6 @@ main {
   //   right: 0;
   background: none;
 
-  .menu {
-    background: none
-  }
 
   .top-bar-right {
     justify-content: flex-end;
@@ -26,6 +15,20 @@ main {
   // a {
   //   color: #0a0a0a;
   // }
+}
+
+.off-canvas-branding {
+  margin-top: 4rem;
+}
+
+.off-canvas-nav {
+  margin-top: 2rem;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  // margin-top: 4rem;
 }
 
 .sticky-container {
@@ -44,24 +47,27 @@ main {
   background-size: cover;
 
   h1 {
-    font-family: garamond-premier-pro-display;
-    font-size: rem-calc(64);
+    font-family: $header-font-family;
+    font-size: rem-calc(56);
+    // text-transform: uppercase;
     font-variant-caps: all-small-caps;
-    letter-spacing: 0.065em;
-    line-height: 0.65;
+    letter-spacing: 0.10em;
+    line-height: 0.8;
+    color: #444;
     position: absolute;
     right: 1em;
     bottom: 20%;
   }
-}
 
-// Styling <span class="artist"> on homepage feature
-.artist {
-  font-size: 0.65em;
-  font-style: italic;
-  letter-spacing: 0;
-  font-variant-caps: normal;
-  font-feature-settings: normal;
+  // Styling <span class="artist"> on homepage feature
+  .artist {
+    font-size: 0.6em;
+    font-style: italic;
+    letter-spacing: 0;
+    font-variant-caps: normal;
+    text-transform: none;
+    margin-left: 0.25em;
+  }
 }
 
 //  Homepage Section Layout
@@ -78,12 +84,8 @@ main {
 
 .section--portfolio {
   .figure {
-    padding-bottom: rem-calc(160);
+    padding-bottom: rem-calc(200);
   }
-}
-
-.figcaption.small-order-1 {
-  justify-content: flex-end;
 }
 
 /* Footer */
@@ -91,7 +93,6 @@ main {
 .footer {
   background-color: #314043;
   
-
   * {
     color: $light-gray;
   }
@@ -100,6 +101,10 @@ main {
 .footer-nav {
   min-height: 12em;
   padding: 1em 0 2em 0;
+}
+
+.footer-copyright {
+
 }
 
 /* Typography */
@@ -113,11 +118,10 @@ body {
 }
 
 .top-bar-title a {
-  font-family: $header-font-family;
+  // font-family: $header-font-family;
   font-size: 1.5rem;
-  font-variant-caps: all-small-caps;
-  letter-spacing: 0.05em;
-  color: $dark-gray;
+  // font-variant-caps: all-small-caps;
+  // letter-spacing: 0.05em;
 }
 
 .about-content h1 {
@@ -131,17 +135,13 @@ body {
   }
 
   figure {
-
     h3,
     p {
-      // font-family: $body-font-family;
-      // font-size: $global-font-size * 1.25;
+      font-family: $body-font-family;
+      font-weight: $global-weight-normal;
+      font-size: $global-font-size * 1.2;
+      line-height: $global-lineheight;
       margin-bottom: 0;
-    }
-
-    h3 {
-      font-size: 1.25rem;
-      color: #252525
     }
   }
 }
@@ -166,15 +166,14 @@ abbr,
   //  max-height: 80vh;
 }
 
-.menu a {
-  font-family: sofia-pro-soft, 'Helvetica Neue', helvetica, sans-serif;
-  font-weight: 300;
-  text-transform: lowercase;
-  letter-spacing: 1px;
+.off-canvas-branding a {
+  font-family: $body-font-family;
+  font-weight: $global-weight-normal;
+  font-size: $global-font-size * 1.2;
+  // text-transform: uppercase;
+  // letter-spacing: 0.12em;
+}
 
-  .is-active {
-    font-weight: bold;
-    color: green;
-    // font-style: italic;
-  }
+.off-canvas-nav a {
+  line-height: $global-lineheight * 1.1;  
 }

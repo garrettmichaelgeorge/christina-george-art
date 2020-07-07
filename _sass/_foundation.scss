@@ -77,9 +77,9 @@
 @import 'prototype/prototype';
 
 
-@mixin foundation-everything(
+@mixin foundation-custom(
   $flex: true,
-  $prototype: false,
+  $prototype: true,
   $xy-grid: $xy-grid
 ) {
   @if $flex {
@@ -110,29 +110,31 @@
 
   // Generic components
   @include foundation-button;
-  @include foundation-button-group;
+  // @include foundation-button-group;
   @include foundation-close-button;
   @include foundation-label;
-  @include foundation-progress-bar;
-  @include foundation-slider;
-  @include foundation-switch;
-  @include foundation-table;
+  // @include foundation-progress-bar;
+  // @include foundation-slider;
+  // @include foundation-switch;
+  // @include foundation-table;
+
   // Basic components
-  @include foundation-badge;
-  @include foundation-breadcrumbs;
-  @include foundation-callout;
+  // @include foundation-badge;
+  // @include foundation-breadcrumbs;
+  // @include foundation-callout;
   @include foundation-card;
-  @include foundation-dropdown;
-  @include foundation-pagination;
-  @include foundation-tooltip;
+  // @include foundation-dropdown;
+  // @include foundation-pagination;
+  // @include foundation-tooltip;
 
   // Containers
-  @include foundation-accordion;
+  // @include foundation-accordion;
   @include foundation-media-object;
   @include foundation-orbit;
-  @include foundation-responsive-embed;
-  @include foundation-tabs;
+  // @include foundation-responsive-embed;
+  // @include foundation-tabs;
   @include foundation-thumbnail;
+
   // Menu-based containers
   @include foundation-menu;
   @include foundation-menu-icon;

@@ -1,25 +1,29 @@
   <div class="grid-y">
-  <h2 id="fitText" class="section-title">Portfolio</h2>
-  {% for work in site.works %}
+    <h2 id="fitText" class="section-title">Portfolio</h2>
 
-  <figure class="figure cell grid-x grid-margin-x {% cycle "align-left", "align-right" %}">
-    <div class="thumbnail-wrapper cell medium-8 align-self-bottom {% cycle "medium-order-2", "medium-order-1" %}">
-      <div class="thumbnail" href="{{ work.url }}">
-        <img class="image" src="{{ work.image.url | prepend: site.image_serve_path }}" alt="{{ work.title }}">
-        <!-- <img src="/img/blank.png" alt="{{ work.title }}" data-echo="{{ work.image.url | prepend: site.image_serve_path }}"> -->
-      </div>
-    </div>
-    <figcaption
-      class="flex-container figcaption cell medium-4 align-self-bottom {% cycle 'align-right medium-order-1', 'align-left medium-order-2' %}">
-      <div class="container">
-        <h3>{{ work.title }}</h3>
-        <p>
-          {{ work.materials }}<br />
-          {{ work.dimensions }}
-        </p>
-      </div>
-    </figcaption>
-  </figure>
+    {% for work in site.works %}
 
-  {% endfor %}
+    <figure class="figure cell grid-x grid-margin-x">
+
+      <div class="thumbnail-wrapper cell medium-8 align-self-bottom">
+        <div class="thumbnail" href="{{ work.url }}">
+          <img class="image" src="{{ work.image.url | prepend: site.image_serve_path }}" alt="{{ work.title }}">
+          <!-- <img src="/img/blank.png" alt="{{ work.title }}" data-echo="{{ work.image.url | prepend: site.image_serve_path }}"> -->
+        </div>
+      </div>
+
+      <figcaption class="flex-container figcaption cell medium-4 align-self-bottom">
+        <div class="container">
+          <h3>{{ work.title }}</h3>
+          <p>
+            {{ work.materials }}<br />
+            {{ work.dimensions }}
+          </p>
+        </div>
+      </figcaption>
+
+    </figure>
+
+    {% endfor %}
+
   </div>

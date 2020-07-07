@@ -8,27 +8,22 @@
   <!-- Sticky Container -->
   <!-- <div class="sticky-container" data-sticky-container> -->
   <header id="top-bar" class="top-bar" data-sticky-container>
-
     <!-- Site Logo -->
-    <div class="top-bar-left sticky" data-sticky data-sticky-on="small" data-anchor="hero" data-options="marginTop:0;">
-      <div class="top-bar-title">
-        <!-- <ul class="menu"> -->
-        <a class="topbar-responsive-logo" href="/">Christina George</a>
-        <!-- </ul> -->
-      </div>
-    </div>
+    <!-- <div class="top-bar-left sticky" data-sticky data-sticky-on="small" data-anchor="hero" data-options="marginTop:0;"> -->
+    <!--   <div class="top-bar-title"> -->
+    <!--     <a class="topbar-responsive-logo" href="/">Christina George</a> -->
+    <!--   </div> -->
+    <!-- </div> -->
 
     <!-- Hamburger icon -->
-    <div class="top-bar-right flex-container sticky" data-sticky data-sticky-on="small" data-anchor=""
-      data-options="marginTop:1;">
+    <div class="top-bar-right flex-container sticky pt-4" data-sticky data-sticky-on="small" data-anchor="" data-margin-top="2">
       <button class="menu-icon" type="button" data-toggle="offCanvas"></button>
     </div>
-
   </header>
 
-<!-- <div class="grid-container hide-for-small-only">
-  <h1 class="">Christina<br>George&nbsp;<span class="artist">artist</span></h1>
-</div> -->
+  <div class="grid-container hide-for-small-only">
+    <h1 id="hero-text" class="hero-text">Christina<br>George<span class="artist">artist</span></h1>
+  </div>
 </div>
 
   <!-- Off-Canvas Menu -->
@@ -39,13 +34,18 @@
         <span aria-hidden="true">&times;</span>
       </button>
 
+      <div class="off-canvas-branding text-center">
+          <a class="text-center" href="/">Christina George</a>
+      </div>
 
       <!-- Navigation -->
-      <nav role="navigation">
-        <ul class="menu vertical" data-magellan data-animation-easing="swing" data-animation-duration="600" data-offset="0">
+      <nav class="off-canvas-nav" role="navigation">
+        <ul class="menu vertical margin-top-4" data-magellan data-animation-easing="swing" data-animation-duration="600" data-offset="0">
+
           {% for item in site.data.nav-main %}
-          <li><a href="{{ item.url }}" data-close>{{ item.title }}</a></li>
+          <li class="text-lowercase"><a href="{{ item.url }}" data-close>{{ item.title }}</a></li>
           {% endfor %}
+
         </ul>
       </nav>
     </div>

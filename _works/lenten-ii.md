@@ -1,7 +1,7 @@
 ---
 title: Lenten II
 materials: Watercolor
-dimensions: 14 &times; 17 in.
+dimensions: 14 &times; 17
 price:
 date_completed:
 

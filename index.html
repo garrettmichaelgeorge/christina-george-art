@@ -1,15 +1,15 @@
 ---
 title: Home
 layout: default
-hero_image: kindred-spirits-reversed.jpg
+hero_image: kindred-spirits.jpg
 intro_text: Christina George is an artist, musicologist, and pianist living in Cincinnati, <abbr class="small-caps">OH.</abbr>
 ---
 
 {% for section in site.data.nav-main %}
-{% assign title = section.title | downcase %}
-<section id="{{ title }}" class="section section--{{ title }}" data-magellan-target="{{ title }}">
+  {% assign title = section.title | downcase %}
+  <section id="{{ title }}" class="section section--{{ title }}" data-magellan-target="{{ title }}">
 
-    {% include_relative {{ section.filename }} %}
+      {% include_relative {{ section.filename }} %}
 
-</section>
+  </section>
 {% endfor %}

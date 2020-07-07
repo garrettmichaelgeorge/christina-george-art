@@ -67,7 +67,7 @@
 
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
-$global-lineheight: 1.5;
+$global-lineheight: 1.3;
 $foundation-palette: (
   primary: #1779ba,
   secondary: #767676,
@@ -75,24 +75,23 @@ $foundation-palette: (
   warning: #ffae00,
   alert: #cc4b37,
 );
-$light-gray: #e6e6e6;
+$light-gray: #ffffff;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
-$black: #0a0a0a;
+$black: #333;
 $white: #fefefe;
-$body-background: $white;
-// $body-background: linear-gradient(90deg, rgba(166,156,163,1) 11%, rgba(199,215,217,1) 30%);
-$body-font-color: #636363;
+$body-background: $light-gray;
+$body-font-color: $black;
 // $body-font-family: orpheuspro, garamond-premier-pro, 'Hoefler Text', Georgia, serif;
-$body-font-family: sofia-pro-soft, sans-serif;
+$body-font-family: ff-scala-sans-pro, source-sans-pro, sofia-pro-soft, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-position: 1rem;
-$global-weight-normal: 300;
+$global-weight-normal: 400;
 $global-weight-bold: bold;
 $global-radius: 0;
-$global-menu-padding: 0.7rem 1rem;
+$global-menu-padding: 0rem 1rem;
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
 $global-flexbox: true;
@@ -134,10 +133,10 @@ $block-grid-max: 8;
 // ------------------
 
 $header-font-family: orpheuspro, serif;
-$header-font-weight: 300;
+$header-font-weight: 400;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: #171717;
+$header-color: $body-font-color;
 $header-lineheight: 1.18;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
@@ -205,9 +204,9 @@ $abbr-underline: none;
 // 5. Typography Helpers
 // ---------------------
 
-$lead-font-size: $global-font-size * 2;
-$lead-lineheight: 1.6;
-$subheader-lineheight: 1.4;
+$lead-font-size: $global-font-size * 1.5;
+$lead-lineheight: $global-lineheight;
+$subheader-lineheight: $header-lineheight;
 $subheader-color: $dark-gray;
 $subheader-font-weight: $global-weight-normal;
 $subheader-margin-top: 0.2rem;
@@ -475,7 +474,7 @@ $mediaobject-image-width-stacked: 100%;
 // 23. Menu
 // --------
 
-$menu-margin: 0;
+$menu-margin: 1rem;
 $menu-nested-margin: $global-menu-nested-margin;
 $menu-items-padding: $global-menu-padding;
 $menu-simple-margin: 1rem;
@@ -501,8 +500,8 @@ $meter-fill-bad: $alert-color;
 // --------------
 
 $offcanvas-sizes: (
-  small: 250px,
-  // small: 100vw,
+  small: 100vw,
+  medium: 15rem,
 );
 $offcanvas-vertical-sizes: (
   // small: 250px,
@@ -519,7 +518,7 @@ $offcanvas-push-zindex: 12;
 $offcanvas-overlap-zindex: 13;
 $offcanvas-reveal-zindex: 12;
 $offcanvas-transition-length: 0.5s;
-$offcanvas-transition-timing: ease;
+$offcanvas-transition-timing: ease-in-out;
 $offcanvas-fixed-reveal: true;
 $offcanvas-exit-background: rgba($white, 0.25);
 $maincontent-class: 'off-canvas-content';
@@ -819,9 +818,10 @@ $tab-content-padding: 1rem;
 // 52. Thumbnail
 // -------------
 
-$thumbnail-border: 4px solid $white;
+// $thumbnail-border: 1rem solid $white;
+$thumbnail-border: none;
 $thumbnail-margin-bottom: 0.3rem;
-$thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
+$thumbnail-shadow: 3px 3px 4px 0px rgba($medium-gray, 1);
 // $thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
 $thumbnail-shadow-hover: 0 0 8px 2px rgba($dark-gray, 0.5);
 $thumbnail-transition: box-shadow 200ms ease-out;
@@ -860,7 +860,7 @@ $topbar-padding: 1rem 2rem;
 $topbar-background: transparent;
 $topbar-submenu-background: $topbar-background;
 // $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
-$topbar-title-spacing: 1rem 0;
+$topbar-title-spacing: 3rem 1rem;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: small;
 
@@ -871,8 +871,8 @@ $xy-grid: true;
 $grid-container: $global-width;
 $grid-columns: 12;
 $grid-margin-gutters: (
-  small: 20px,
-  medium: 30px
+  small: 2rem,
+  medium: 3rem
 );
 $grid-padding-gutters: $grid-margin-gutters;
 $grid-container-padding: $grid-padding-gutters;
