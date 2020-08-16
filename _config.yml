@@ -58,6 +58,10 @@ collections:
     feature_text: |
       Portfolio
     order:
+      - our-land.md
+      - wednesday-morning-ink-sketch.md
+      - wednesday-morning-wash.md
+      - wednesday-morning.md
       - inhale.md
       - kindred-spirits.md
       - february-ink-sketch.md
